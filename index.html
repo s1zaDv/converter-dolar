@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DollarConvert | Conversor de Moedas</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: Arial, sans-serif;
+        background: #101b2d;
+        color: white;
+        min-height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .container {
+        width: 90%;
+        max-width: 450px;
+      }
+
+      header {
+        text-align: center;
+        margin-bottom: 30px;
+      }
+
+      header h1 {
+        font-size: 36px;
+        color: #57d6a0;
+      }
+
+      header p {
+        color: #aab6c8;
+        margin-top: 10px;
+      }
+
+      .calculator {
+        background: #1d2b40;
+        padding: 30px;
+        border-radius: 15px;
+      }
+
+      h2 {
+        margin-bottom: 25px;
+      }
+
+      label {
+        display: block;
+        margin-bottom: 10px;
+      }
+
+      input {
+        width: 100%;
+        padding: 14px;
+        background: #101b2d;
+        border: 1px solid #40536c;
+        border-radius: 7px;
+        color: white;
+        font-size: 16px;
+      }
+
+      .exchange {
+        display: flex;
+        justify-content: center;
+        gap: 25px;
+        margin: 25px 0;
+        font-size: 20px;
+        font-weight: bold;
+        color: #57d6a0;
+      }
+
+      button {
+        width: 100%;
+        padding: 14px;
+        border: none;
+        border-radius: 7px;
+        background: #57d6a0;
+        color: #101b2d;
+        font-size: 16px;
+        font-weight: bold;
+        cursor: pointer;
+      }
+
+      button:hover {
+        background: #3fbd88;
+      }
+
+      #resultado {
+        margin-top: 25px;
+        text-align: center;
+        font-size: 24px;
+        color: #57d6a0;
+      }
+
+      .rate {
+        margin-top: 20px;
+        text-align: center;
+        color: #aab6c8;
+        font-size: 13px;
+      }
+
+      footer {
+        text-align: center;
+        margin-top: 25px;
+        color: #aab6c8;
+      }
+    </style>
+  </head>
+  <body>
+    <main class="container">
+      <header>
+        <h1>Conversor de Dólar</h1>
+        <p>Converta dólares para reais de forma simples.</p>
+      </header>
+
+      <section class="calculator">
+        <h2>Conversor de moedas</h2>
+
+        <label>Valor em dólares (US$)</label>
+        <input type="number" id="valor" placeholder="Ex: 100" />
+
+        <div class="exchange">
+          <span>USD</span>
+          <span>→</span>
+          <span>BRL</span>
+        </div>
+
+        <button onclick="mostrarConversao()">Converter</button>
+
+        <div id="resultado"></div>
+
+        <p class="rate">Cotação utilizada: US$ 1 = R$ 5,47</p>
+      </section>
+
+      <footer>
+        <p>Conversor de Dólar © 2026</p>
+      </footer>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
